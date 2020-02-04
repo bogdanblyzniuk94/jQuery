@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="highlight/styles/vs2015.css">
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<main class="about">
+	<h1>Let's talk about jQuery!</h1>
+	<p>jQuery is a fast, small, and feature-rich JavaScript library.<br> It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.<br> With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+</main>
+
+<section class="connection">
+	<div class="row">
+		<div class="column">
+			<h2>Downloading and connect jQuery</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column">
+			<h3>You can download jQuery library from official site <a href="https://jquery.com/download/">jQuery</a> and add it to directory your project</h3>
+		</div>
+        <div class="column">
+            <pre>
+                <code class="html">
+    &lt;script src="js/jquery-3.4.1.js" type="text/javascript"&gt;&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="row">
+		<div class="column">
+			<h3>Or you can copy link to jQuery library from official site <a href="https://jquery.com/download/">jQuery</a> or other's CDN, for example, <a href="https://developers.google.com/speed/libraries#jquery">Google CDN</a></h3>
+		</div>
+        <div class="column">
+            <pre>
+                <code class="html">
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"&gt;&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+	</div>
+</section>
+
+<section class="dollar-function">
+    <div class="row">
+        <div class="column">
+            <h2>Function $()</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>One of the most commonly used functions in jQuery is the $() function.</h3>
+            <pre>
+                <code class="javascript">
+    var text = $("#password").val();
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>Also, you can call function $(), write jQuery instead $</h3>
+            <pre>
+                <code class="javascript">
+    var text = jQuery("#password").val();
+                </code>
+            </pre>
+        </div>
+    </div>
+</section>
+
+<section class="choose-elements">
+    <div class="row">
+        <div class="column">
+            <h2>Select elements on web page</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>You can select items by ID,...</h3>
+            <pre>
+                <code class="javascript">
+    var text = jQuery("#counter").html();
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>... class...</h3>
+            <pre>
+                <code class="javascript">
+    var text = jQuery(".row").html();
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>... or tag</h3>
+            <pre>
+                <code class="javascript">
+    var text = jQuery("div").html();
+                </code>
+            </pre>
+        </div>
+    </div>
+</section>
+
+<section class="manipulations">
+    <div class="row">
+        <div class="column">
+            <h2>Manipulations</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>You can manipulate classes on web page with jQuery. This code allows you to change the class of the element of the web page when you enter 1 or 2.</h3>
+            <pre>
+                <code class="javascript">
+    var div = prompt("1 or 2?");
+    while (div !=1 && div !=2) {
+        alert("Please, enter 1 or 2")
+        div = prompt("1 or 2?");
+    }
+    $("#div").attr("class", "div_" + div);
+    alert($("#div").get(0).className);
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>Also you can manipulate styles on web page. This code allows you to change styles of the selected element.</h3>
+            <pre>
+                <code>
+    $("#div").css("font-size", "25px");
+    $("#div").css("color", "red");
+
+    $("#div").css("background-color", function() {
+        return "blue";
+    });
+
+    $("#div").css("width", "250px");
+
+    $("#div").css("height", function() {
+        var height = prompt("Enter height: ");
+        return height + "px";
+    });
+                </code>
+            </pre>
+        </div>
+    </div>
+</section>
+
+<section class="jquery-functions">
+    <div class="row">
+        <div class="column">
+            <h2>jQuery functions</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>There are many jQuery functions. Here is some of them: <br> .html() - Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element. <br> .text() - Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements. <br> .clone() - Create a deep copy of the set of matched elements. <br> .append() - Insert content, specified by the parameter, to the end of each element in the set of matched elements. <br> .remove() - Remove the set of matched elements from the DOM. <br> .insertAfter() - Insert every element in the set of matched elements after the target. <br> .insertBefore() - Insert every element in the set of matched elements before the target. <br>
+                Full list of jQuery functions available on <a href="https://api.jquery.com/">jQuery API Documentation</a>.</h3>
+        </div>
+    </div>
+</section>
+
+<section class="examples">
+    <div class="row">
+        <div class="column">
+            <h2>Examples</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>Сomment form</h3>
+            <div id="comments">
+                <p style="margin-top: 10px">Сomment 1</p>
+                <p style="margin-top: 10px">Сomment 2</p>
+                <p style="margin-top: 10px">Сomment 3</p>
+            </div>
+
+            <form name="form" action="" method="post" id="form" style="display: none; margin-top: 10px" onsubmit="return false">
+                <textarea id="textarea" name="comment" cols="30" rows="10"></textarea><br>
+                <input type="submit" name="send" value="Add сomment" id="done">
+            </form>
+
+            <a style=" margin-top: 10px" href="#" onclick="return false" id="add_comment">Add сomment</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>Animation</h3>
+            <a href="#" id="hide" style="margin-top: 10px" onclick="return false">Hide</a>
+            <a href="#" id="show" style="display: none; margin-top: 10px" onclick="return false">Show</a>
+            <div id="comments-1">
+                <p style="margin-top: 10px">Сomment 1</p>
+                <p style="margin-top: 10px">Сomment 2</p>
+                <p style="margin-top: 10px">Сomment 3</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>Zoom image</h3>
+            <p id="test">
+                <img style="margin-top: 10px" src="img/1.jpg" alt="Изображение" title="Изображение" id="img" width="200">
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>Event listener</h3>
+            <div class="square" style="height: 50px; width: 50px; background-color: red;"></div>
+            <div class="square" style="height: 50px; width: 50px; background-color: blue;"></div>
+            <div class="square" style="height: 50px; width: 50px; background-color: green;"></div>
+        </div>
+    </div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="js/square.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/showhide.js"></script>
+<script src="js/image.js"></script>
+</body>
+</html>
